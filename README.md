@@ -22,3 +22,4 @@ Nothing else should be considered or implemented.
 * Cucumber for acceptance tests
 * RSpec for unit tests
 
+##### Craft Academy February 2017 cohort
