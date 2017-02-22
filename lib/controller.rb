@@ -59,9 +59,9 @@ class SlowFood < Sinatra::Base
     erb :menu
   end
 
-  get '/auth/login' do
-    erb :login
-  end
+  # get '/auth/login' do
+  #   erb :login
+  # end
 
   post '/auth/login' do
     env['warden'].authenticate!

@@ -5,7 +5,7 @@ I want to be able to see a list of dishes
 
 Background:
 Given the following dishes exist
-| dish_name  | price |
+| name  | price |
 | Pizza      | 20    |
 | Kebab      | 30    |
 
