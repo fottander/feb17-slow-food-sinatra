@@ -1,0 +1,7 @@
+<!doctype html>
+<h1>Our Menu</h1>
+
+<% @dishes.each do | dish | %>
+<p> <%= dish.dish_name %>, <%= dish.price %> </p>
+
+<% end %>
