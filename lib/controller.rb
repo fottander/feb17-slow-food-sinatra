@@ -55,12 +55,17 @@ class SlowFood < Sinatra::Base
   end
 
   get '/menu' do
+    @dishes = Dish.all
     erb :menu
   end
 
   get '/auth/login' do
     erb :login
   end
+
+  # get '/auth/login' do
+  #   erb :login
+  # end
 
   post '/auth/login' do
     env['warden'].authenticate!
