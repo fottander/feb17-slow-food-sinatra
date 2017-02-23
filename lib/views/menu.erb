@@ -1,0 +1,5 @@
+<h1>Our Menu</h1>
+
+  <% @dishes.each do | dish | %>
+  <p><%= dish.name %>, <%= dish.price %></p>
+  <% end %>
