@@ -2,10 +2,8 @@ Given(/^I visit the menu page$/) do
   visit '/menu'
 end
 
-
 Then(/^I should see "([^"]*)"$/) do |content|
   expect(page).to have_content content
-
 
 Then(/^I should see "([^"]*)" with "([^"]*)"$/) do |name, price|
   expect(page).to have_content name
@@ -15,7 +13,5 @@ end
 Given(/^the following dishes exist$/) do |table|
   table.hashes.each do | dish |
   Dish.create(dish)
-
 end
-
 end
