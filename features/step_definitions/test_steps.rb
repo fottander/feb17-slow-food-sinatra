@@ -11,6 +11,10 @@ Then(/^I should see "([^"]*)" with "([^"]*)"$/) do |name, price|
   expect(page).to have_content price
 end
 
+When(/^I click "([^"]*)"$/) do |button|
+  click_button button
+end
+
 Given(/^the following dishes exist$/) do |table|
   table.hashes.each do | dish |
   Dish.create(dish)
