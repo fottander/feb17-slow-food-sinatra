@@ -4,6 +4,7 @@ end
 
 Then(/^I should see "([^"]*)"$/) do |content|
   expect(page).to have_content content
+end
 
 Then(/^I should see "([^"]*)" with "([^"]*)"$/) do |name, price|
   expect(page).to have_content name
