@@ -56,6 +56,7 @@ class SlowFood < Sinatra::Base
 
   get '/menu' do
     @dishes = Dish.all
+    @cart = Cart.new
     erb :menu
   end
 
