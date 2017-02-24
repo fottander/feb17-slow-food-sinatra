@@ -59,6 +59,8 @@ class SlowFood < Sinatra::Base
     erb :menu
   end
 
+  enable :sessions
+
   post '/menu' do
     @dish = Dish.get(params[:dishid].to_i)
     @dish.save
@@ -66,6 +68,7 @@ class SlowFood < Sinatra::Base
     @cart = @dish
     @cart.update
     @cart.save
+    binding.pry
   end
 
   get '/auth/login' do
