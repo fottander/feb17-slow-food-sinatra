@@ -2,5 +2,8 @@
 
   <% @dishes.each do | dish | %>
   <p><%= dish.name %>, <%= dish.price %></p>
-  <form method='post'><input type='submit' name=<%= "dish[#{dish.id}]" %> value='Add' /></form>
+  <form method='post'>
+    <input type='hidden' name='dishid' value=<%= "#{dish.id}" %> />
+    <input type='submit' value='Add' />
+  </form>
   <% end %>
