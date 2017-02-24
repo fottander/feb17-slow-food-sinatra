@@ -66,7 +66,6 @@ class SlowFood < Sinatra::Base
     @cart = @dish
     @cart.update
     @cart.save
-    binding.pry
   end
 
   get '/auth/login' do
