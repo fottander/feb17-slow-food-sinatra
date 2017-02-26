@@ -63,12 +63,14 @@ class SlowFood < Sinatra::Base
 
   post '/menu' do
     @dish = Dish.get(params[:dishid].to_i)
-    @dish.save
-    @cart = Cart.new
-    @cart = @dish
-    @cart.update
-    @cart.save
     binding.pry
+    @cart = Cart.create(item: [@dish])
+    @cart.save
+  end
+
+  get '/cart' do
+    @cart = Cart.all
+    erb :cart
   end
 
   get '/auth/login' do

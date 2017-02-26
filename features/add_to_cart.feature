@@ -10,4 +10,4 @@ Feature: As a customer
   Scenario: Visitor is presented with a menu on menu page
     Given I visit the menu page
     Then I should see "Our Menu"
-    When I click "Add"
+    And I click "Add"
